@@ -629,3 +629,108 @@ button:hover {
   font-size: 30px;
   font-style: italic;
 }
+/* =================================
+   FINAL PREMIUM POLISH
+================================= */
+
+body {
+  animation: pageLoad 1s ease forwards;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button press */
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Better image interaction */
+
+.photo {
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.photo:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,111,174,0.25);
+}
+
+/* Timeline hover */
+
+.timeline-item {
+  transition: transform 0.4s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(5px);
+}
+
+/* Letter hover */
+
+.long-letter {
+  transition:
+    border-color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.long-letter:hover {
+  border-color: rgba(166,108,255,0.22);
+  transform: translateY(-3px);
+}
+
+/* Selection */
+
+::selection {
+  background: rgba(166,108,255,0.35);
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    var(--purple),
+    var(--pink)
+  );
+  border-radius: 20px;
+}
+
+/* Mobile polish */
+
+@media (max-width: 600px) {
+
+  .hero p {
+    font-size: 15px;
+    max-width: 95%;
+  }
+
+  .letter p,
+  .long-letter p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  button {
+    padding: 14px 21px;
+  }
+
+}
