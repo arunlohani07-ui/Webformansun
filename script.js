@@ -28,12 +28,27 @@ function showSurprise() {
   const surprise =
     document.getElementById("surprise");
 
+  const button =
+    document.querySelector(".final-card button");
+
+  if (surprise.classList.contains("show")) {
+    return;
+  }
+
+  button.innerHTML = "For You ♡";
+
+  button.style.pointerEvents = "none";
+
   surprise.classList.add("show");
 
-  surprise.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
+  setTimeout(() => {
+
+    surprise.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+
+  }, 300);
 
 }
 
